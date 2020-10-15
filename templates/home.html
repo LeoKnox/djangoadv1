@@ -7,7 +7,11 @@
 <p>{{ room_name }} is {{ width }} by {{ length }}</p>
 <ul>
 {% for door in doors %}
-    <li>{{door}}</li>
+    {% if door == "door1" %}
+        <li>{{ forloop.counter }} - {{ door }}</li>
+    {% else %}
+        <li>{{door}}</li>
+    {% endif %}
 {% endfor %}
 </ul>
 {% endblock %}

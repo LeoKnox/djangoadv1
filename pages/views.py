@@ -5,7 +5,8 @@ def home_view(request, *args, **kwargs):
     my_context = {
         "room_name": "Entry",
         "width": 5,
-        "length": 5
+        "length": 5,
+        "doors": { "door1", "door2" }
     }
     return render(request, "home.html", my_context)
 

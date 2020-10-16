@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_view, addroom_view
+from rooms.views import room_detail_view
 
 urlpatterns = [
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
+    path('room/', room_detail_view),
     path('addroom/', addroom_view, name='addroom'),
     path('admin/', admin.site.urls),
 ]

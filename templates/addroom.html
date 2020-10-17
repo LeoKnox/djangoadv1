@@ -2,6 +2,8 @@
 
 {% block content %}
 <h1>Build new room</h1>
-
-<p>For larger dungeons</p>
+<form>
+    {{ form.as_p }}
+    <input type='submit' value='Save' />
+</form>
 {% endblock %}
